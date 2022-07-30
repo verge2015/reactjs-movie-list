@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useLocation, Link } from 'react-router-dom';
 import { BiArrowBack } from 'react-icons/bi'
 import { motion } from "framer-motion";
+import { getMovieByID } from '../controllers/movie.controllers.js';
 import {
   Box,
   Container,
@@ -32,10 +33,12 @@ function Profile(props) {
 
   const fetchData = async () => {
     /* Fetching the data from the API and setting the state of the movies array to the data. */
-    const response = await fetch("http://www.omdbapi.com/?i=" + selected + "&apikey=75a7ad13");
-    const data = await response.json();
+    // const response = await fetch("http://www.omdbapi.com/?i=" + selected + "&apikey=75a7ad13");
+    // const data = await response.json();
+    const data = await getMovieByID(selected)
     setMovies(data);
   };
+
 
   /* A React hook that is used for data fetching, component state, and for executing side effects. */
   useEffect(() => {
