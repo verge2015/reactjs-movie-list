@@ -28,11 +28,11 @@ function Profile(props) {
 
   /* Setting the state of the movies array to an empty array. */
   const location = useLocation();
-  const [selected, setSelected] = useState(location.test)
+  const [selected] = useState(location.test)
 
   const fetchData = async () => {
     /* Fetching the data from the API and setting the state of the movies array to the data. */
-    const response = await fetch("https://www.omdbapi.com/?i=" + selected + "&apikey=75a7ad13");
+    const response = await fetch("http://www.omdbapi.com/?i=" + selected + "&apikey=75a7ad13");
     const data = await response.json();
     setMovies(data);
   };

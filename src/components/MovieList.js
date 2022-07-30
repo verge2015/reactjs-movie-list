@@ -21,7 +21,7 @@ export default function MovieList(props) {
       searchText = "saw"
     }
 
-    let url = "https://www.omdbapi.com/?s=" + searchText + "&p=1-10&apikey=75a7ad13"
+    let url = "http://www.omdbapi.com/?s=" + searchText + "&p=1-10&apikey=75a7ad13"
     /* It fetches data from the OMDB API and sets the data to the movies variable. */
     const response = await fetch(url);
     const data = await response.json();
