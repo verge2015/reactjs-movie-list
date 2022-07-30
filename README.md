@@ -7,7 +7,7 @@ This is site for movie listing using Javascript Framework ReactJS with a two pag
     ReactJS 18.1.0
     Chakra UI 1.8.8
     Framer-Motion 6.3.3
-    React-Router-Dom 5.3.3,
+    React-Router-Dom 5.3.3
 ```
 
 ## Installation Packages
