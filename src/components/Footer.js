@@ -11,6 +11,7 @@ import {
 export default function Footer() {
   return (
     <Box
+      
       marginTop={100}
       bg={useColorModeValue('gray.50', 'gray.900')}
       color={useColorModeValue('gray.700', 'gray.200')}>
@@ -53,7 +54,7 @@ export default function Footer() {
           spacing={4}
           justify={{ md: 'space-between' }}
           align={{ md: 'center' }}>
-          <Text>© 2022 Chakra Templates. All rights reserved</Text>
+          <Text>© 2022 All rights reserved</Text>
           <Stack direction={'row'} spacing={6}>
           </Stack>
         </Container>

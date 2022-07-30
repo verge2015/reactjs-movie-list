@@ -51,7 +51,9 @@ function App() {
           </Switch>
         </Router>
       </VStack>
-      <Footer></Footer>
+
+      {/* Insert footer */}
+      <Footer/>
     </>
   );
 }
