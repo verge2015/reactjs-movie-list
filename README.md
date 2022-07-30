@@ -1,7 +1,7 @@
-# Basic movie list webpage using ReactJS
+# reactjs-movie-list
 
-This project is a simple 2 pages website, movie list and movie profile.
-This is site for movie listing with a two pages site, the movie listing and movie profile using the OMDB API.
+This is site for movie listing using Javascript Framework ReactJS with a two pages site, the movie listing and movie profile using the OMDB API.
+
 ## Packages
 ```bash
     ReactJS 18.1.0
