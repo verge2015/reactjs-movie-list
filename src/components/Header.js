@@ -1,6 +1,6 @@
-import { SearchIcon } from '@chakra-ui/icons';
-import { Circle, Stack, Flex, useMediaQuery, Box, Text, InputGroup, InputLeftElement, Input, Container, WrapItem, Wrap } from '@chakra-ui/react'
 import React from 'react'
+import { Circle, Stack, Flex, useMediaQuery, Box, Text, InputGroup, InputLeftElement, Input, Container, WrapItem, Wrap } from '@chakra-ui/react'
+import { SearchIcon } from '@chakra-ui/icons';
 import { motion, AnimatePresence } from "framer-motion";
 
 function Header(props) {

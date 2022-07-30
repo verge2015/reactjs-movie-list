@@ -1,8 +1,8 @@
-import { Wrap, WrapItem } from '@chakra-ui/react';
 import React, { useState, useEffect } from 'react'
-import Card from './Cards';
+import { Wrap, WrapItem } from '@chakra-ui/react';
 import { useHistory } from 'react-router-dom'
 import { motion } from "framer-motion";
+import Card from './Cards';
 
 export default function MovieList(props) {
   /* Creating a state variable called movies and a function called setMovies. */
