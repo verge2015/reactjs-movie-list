@@ -22,6 +22,8 @@ This is site for movie listing using Javascript Framework ReactJS with a two pag
  npm start
 ```
 
+This site was deployed using GitHub Pages, please visit this [site](https://verge2015.github.io/reactjs-movie-list/) for actual site demo.
+
 ![main-light](https://user-images.githubusercontent.com/16742524/169526130-8b2f49a4-9960-4e0b-90f9-9ded7bd26322.png)
 
 ![main-dark](https://user-images.githubusercontent.com/16742524/169526135-761367b9-da25-47e5-932e-4b9f193d1799.png)
