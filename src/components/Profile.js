@@ -32,7 +32,7 @@ function Profile(props) {
 
   const fetchData = async () => {
     /* Fetching the data from the API and setting the state of the movies array to the data. */
-    const response = await fetch("http://www.omdbapi.com/?i=" + selected + "&apikey=75a7ad13");
+    const response = await fetch("https://www.omdbapi.com/?i=" + selected + "&apikey=75a7ad13");
     const data = await response.json();
     setMovies(data);
   };
