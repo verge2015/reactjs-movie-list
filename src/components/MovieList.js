@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react'
 import Card from './Cards';
 import { useHistory } from 'react-router-dom'
 import { motion } from "framer-motion";
+import { getMoviesDefault } from '../controllers/movie.controllers.js';
 
 export default function MovieList(props) {
   /* Creating a state variable called movies and a function called setMovies. */
@@ -21,19 +22,22 @@ export default function MovieList(props) {
       searchText = "saw"
     }
 
-    let url = "http://www.omdbapi.com/?s=" + searchText + "&p=1-10&apikey=75a7ad13"
-    /* It fetches data from the OMDB API and sets the data to the movies variable. */
-    const response = await fetch(url);
-    const data = await response.json();
+    // let url = "http://www.omdbapi.com/?s=" + searchText + "&p=1-10&apikey=75a7ad13"
+    // /* It fetches data from the OMDB API and sets the data to the movies variable. */
+    // const response = await fetch(url);
+    // const data = await response.json();
     /* Setting the data.Search to the movies variable. */
+    // setMovies(data.Search);
+    const data = await getMoviesDefault("saw")
+
     setMovies(data.Search);
   };
 
   /* A hook that is called when the component is mounted. It is used to fetch data from the OMDB API. */
-  useEffect(() => {
-    console.log("called here")
-    setSearch(props.search2)
-  }, [props.search2]);
+  // useEffect(() => {
+  //   // console.log("called here")
+  //   setSearch(props.search2)
+  // }, [props.search2]);
 
   /* A hook that is called when the component is mounted. It is used to fetch data from the OMDB API. */
   useEffect(() => {
@@ -74,7 +78,8 @@ export default function MovieList(props) {
 
   return (
     <div>
-      {<Wrap>
+      {<Wrap
+        marginBottom={50}>
         {movieList}
       </Wrap>}
     </div>

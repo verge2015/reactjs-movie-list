@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 function Header(props) {
   const [isNotSmallerScreen] = useMediaQuery("(min-width:600px)");
-
+  
   return (
     <Stack>
       <Container maxW='8xl'>
