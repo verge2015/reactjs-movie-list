@@ -9,35 +9,21 @@ export default function MovieList(props) {
   /* Creating a state variable called movies and a function called setMovies. */
   const [movies, setMovies] = useState([]);
   /* Creating a state variable called search and a function called setSearch. */
-  const [search, setSearch] = useState(props.search2);
+  const [search, setSearch] = useState(props.searchText);
 
   /**
    * It fetches data from the OMDB API and sets the data to the movies variable.
    */
   const fetchData = async () => {
-    /* This is a conditional statement that checks if the searchText variable is empty. If it is, it sets
-    the searchText variable to "saw". */
-    let searchText = search
-    if (searchText.length === 0) {
-      searchText = "saw"
-    }
-
-    // let url = "http://www.omdbapi.com/?s=" + searchText + "&p=1-10&apikey=75a7ad13"
-    // /* It fetches data from the OMDB API and sets the data to the movies variable. */
-    // const response = await fetch(url);
-    // const data = await response.json();
-    /* Setting the data.Search to the movies variable. */
-    // setMovies(data.Search);
-    const data = await getMoviesDefault("saw")
-
+    const data = await getMoviesDefault(search)
     setMovies(data.Search);
   };
 
   /* A hook that is called when the component is mounted. It is used to fetch data from the OMDB API. */
-  // useEffect(() => {
-  //   // console.log("called here")
-  //   setSearch(props.search2)
-  // }, [props.search2]);
+  useEffect(() => {
+    // console.log("called here")
+    setSearch(props.searchText)
+  }, [props.searchText]);
 
   /* A hook that is called when the component is mounted. It is used to fetch data from the OMDB API. */
   useEffect(() => {

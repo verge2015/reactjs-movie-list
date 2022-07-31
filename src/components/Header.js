@@ -1,11 +1,30 @@
 import { SearchIcon } from '@chakra-ui/icons';
 import { Circle, Stack, Flex, useMediaQuery, Box, Text, InputGroup, InputLeftElement, Input, Container, WrapItem, Wrap } from '@chakra-ui/react'
-import React from 'react'
+import React, {useState} from 'react'
 import { motion, AnimatePresence } from "framer-motion";
 
 function Header(props) {
   const [isNotSmallerScreen] = useMediaQuery("(min-width:600px)");
   
+  const { 
+    changeSearch 
+  } = props;
+
+  const [searchText, setSearchText] = useState('')
+
+  const handleInput = (e) => {
+    const text = e.target.value
+    console.log("handleInput: " + text)
+    setSearchText(text)
+  }
+
+  const handleEnterKeyPressed = (e) => {
+    if(e.key=== 'Enter') {
+      console.log("Press Enter: " + searchText)
+      changeSearch(searchText)
+    }
+  }
+
   return (
     <Stack>
       <Container maxW='8xl'>
@@ -63,7 +82,10 @@ function Header(props) {
                 name='search'
                 type='search'
                 placeholder='Search'
-                onChange={(event) => props.changeSearch(event.target.value)}
+                onChange={handleInput}
+                onKeyPress={handleEnterKeyPressed}
+                //value={searchText}
+                // onChange={(event) => props.changeSearch(event.target.value)}
               />
             </InputGroup>
           </motion.div>

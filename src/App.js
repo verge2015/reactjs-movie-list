@@ -11,7 +11,7 @@ import MovieList from './components/MovieList'
 
 function App() {
   /* This is a hook that allows you to change the color mode of the app. */
-  const { colorMode, toggleColorMode } = useColorMode();
+  const { colorMode, toggleColorMode } = useColorMode("dark");
   const isDark = colorMode === "dark";
   /* This is a hook that allows you to change the state of the app. */
   const [word, setWord] = useState("saw")
@@ -42,7 +42,7 @@ function App() {
             <Route exact path="/">
               {/* Passing the state of the word to the MovieList component. */}
               <MovieList
-                search2={word} />
+                searchText={word} />
             </Route>
             {/* This is a route that is being used to render the Profile component. */}
             <Route path="/profile">
