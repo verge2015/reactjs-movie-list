@@ -14,13 +14,11 @@ function Header(props) {
 
   const handleInput = (e) => {
     const text = e.target.value
-    console.log("handleInput: " + text)
     setSearchText(text)
   }
 
   const handleEnterKeyPressed = (e) => {
     if(e.key=== 'Enter') {
-      console.log("Press Enter: " + searchText)
       changeSearch(searchText)
     }
   }
@@ -66,7 +64,8 @@ function Header(props) {
 
           <motion.div
             whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 1.1 }}
+            // whileTap={{ scale: 1.1 }}
+            whileFocus={{ scale: 1.1 }}
             className="save-button"
             onClick={() => null}
             fullWidth
