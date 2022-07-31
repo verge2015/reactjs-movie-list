@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react'
 import Card from './Cards';
 import { useHistory } from 'react-router-dom'
 import { motion } from "framer-motion";
-import { getMoviesDefault } from '../controllers/movie.controllers.js';
+import { getMovieList } from '../controllers/movie.controllers.js';
 
 export default function MovieList(props) {
   /* Creating a state variable called movies and a function called setMovies. */
@@ -15,7 +15,7 @@ export default function MovieList(props) {
    * It fetches data from the OMDB API and sets the data to the movies variable.
    */
   const fetchData = async () => {
-    const data = await getMoviesDefault(search)
+    const data = await getMovieList(search)
     setMovies(data.Search);
   };
 
@@ -32,11 +32,11 @@ export default function MovieList(props) {
 
   const history = useHistory();
 
-  function handleClick(val) {
+  function handleClick(movieID) {
     /* Pushing the pathname to the profile page and the test to the val. */
     history.push({
       pathname: '/profile',
-      test: val,
+      movieID: movieID,
     });
   }
 

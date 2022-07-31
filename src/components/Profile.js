@@ -29,7 +29,7 @@ function Profile(props) {
 
   /* Setting the state of the movies array to an empty array. */
   const location = useLocation();
-  const [selected] = useState(location.test)
+  const [selected] = useState(location.movieID)
 
   const fetchData = async () => {
     /* Fetching the data from the API and setting the state of the movies array to the data. */

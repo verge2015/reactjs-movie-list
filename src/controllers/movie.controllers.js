@@ -1,7 +1,11 @@
-const baseURL = "http://www.omdbapi.com";
+const baseURL = "https://www.omdbapi.com";
 const apiKey = process.env.REACT_APP_API_KEY
 
-const getMoviesDefault = async (search) => {
+const getMovieList = async (search) => {
+    if (search.length === 0) {
+        search = "saw"
+    }
+
     const fetchURL = `${baseURL}/?s=${search}&p=1-10&apikey=${apiKey}`
     const res = await fetch(fetchURL);
     return await res.json();
@@ -13,4 +17,4 @@ const getMovieByID = async (movieID) => {
     return await res.json();
 }
 
-export {getMoviesDefault, getMovieByID}
+export {getMovieList, getMovieByID}
