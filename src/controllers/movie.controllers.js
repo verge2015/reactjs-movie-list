@@ -1,5 +1,5 @@
 const baseURL = "https://www.omdbapi.com";
-const apiKey = process.env.REACT_APP_API_KEY
+const apiKey = "75a7ad13" //process.env.REACT_APP_API_KEY
 
 const getMovieList = async (search) => {
     if (search.length === 0) {
