@@ -7,6 +7,7 @@ const getMovieList = async (search) => {
     }
 
     const fetchURL = `${baseURL}/?s=${search}&p=1-10&apikey=${apiKey}`
+    console.log("Get Movie List fetchURL: " + fetchURL)
     const res = await fetch(fetchURL);
     return await res.json();
 }

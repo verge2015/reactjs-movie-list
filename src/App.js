@@ -16,6 +16,8 @@ function App() {
   /* This is a hook that allows you to change the state of the app. */
   const [word, setWord] = useState("saw")
 
+  console.log( "App Version: " + process.env.REACT_APP_VERSION)
+
   return (
     <>
       <VStack p={5}>

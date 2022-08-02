@@ -16,6 +16,7 @@ export default function MovieList(props) {
    */
   const fetchData = async () => {
     const data = await getMovieList(search)
+    console.log("Search Result: " + JSON.stringify(data.Search))
     setMovies(data.Search);
   };
 
