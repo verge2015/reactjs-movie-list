@@ -28,9 +28,9 @@ function App() {
                 ml="10" size="lg" fontWeight='semibold' color="cyan.400">VergeFlix</Heading>
             </Link>
             <Spacer></Spacer>
-            <IconButton icon={<FaLinkedin />} isRound="true" onClick={toggleColorMode}></IconButton>
-            <IconButton ml={2} icon={<FaInstagram />} isRound="true" onClick={toggleColorMode}></IconButton>
-            <IconButton ml={2} icon={<FaGithub />} isRound="true" onClick={toggleColorMode}></IconButton>
+            <IconButton icon={<FaLinkedin />} isRound="true" onClick={()=> window.open("https://www.linkedin.com/in/vergelmanalac/", "_blank")}></IconButton>
+            <IconButton ml={2} icon={<FaInstagram />} isRound="true" onClick={()=> window.open("https://www.instagram.com/vergel.manalac/", "_blank")}></IconButton>
+            <IconButton ml={2} icon={<FaGithub />} isRound="true" onClick={()=> window.open("https://github.com/verge2015/", "_blank")}></IconButton>
             <IconButton ml={8} icon={isDark ? <FaSun /> : <FaMoon />} isRound="true" onClick={toggleColorMode}></IconButton>
           </Flex>
 
