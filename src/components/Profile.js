@@ -31,19 +31,23 @@ function Profile(props) {
   const location = useLocation();
   const [selected] = useState(location.movieID)
 
-  const fetchData = async () => {
-    /* Fetching the data from the API and setting the state of the movies array to the data. */
-    // const response = await fetch("http://www.omdbapi.com/?i=" + selected + "&apikey=75a7ad13");
-    // const data = await response.json();
-    const data = await getMovieByID(selected)
-    setMovies(data);
-  };
+  // const fetchData = async () => {
+  //   /* Fetching the data from the API and setting the state of the movies array to the data. */
+  //   // const response = await fetch("http://www.omdbapi.com/?i=" + selected + "&apikey=75a7ad13");
+  //   // const data = await response.json();
+  //   const data = await getMovieByID(selected)
+  //   setMovies(data);
+  // };
 
 
   /* A React hook that is used for data fetching, component state, and for executing side effects. */
   useEffect(() => {
-    fetchData();
-  }, selected);
+    const fetchData = async () => {
+      const data = await getMovieByID(selected)
+    setMovies(data);
+    };
+    fetchData()   
+  }, [selected]);
 
   return (
     <Container maxW={'7xl'}>
