@@ -14,21 +14,34 @@ export default function MovieList(props) {
   /**
    * It fetches data from the OMDB API and sets the data to the movies variable.
    */
-  const fetchData = async () => {
-    const data = await getMovieList(search)
-    console.log("Search Result: " + JSON.stringify(data.Search))
-    setMovies(data.Search);
-  };
+  // const fetchData = async () => {
+  //   console.log("called here inside fetchData")
+  //   const data = await getMovieList(search)
+  //   console.log("Search Result: " + JSON.stringify(data.Search))
+  //   setMovies(data.Search);
+  // };
 
   /* A hook that is called when the component is mounted. It is used to fetch data from the OMDB API. */
   useEffect(() => {
-    // console.log("called here")
+    console.log("called here use Effect before setSearch")
     setSearch(props.searchText)
   }, [props.searchText]);
 
   /* A hook that is called when the component is mounted. It is used to fetch data from the OMDB API. */
+  // useEffect(() => {
+  //   console.log("called here useEffect before calling fetchData")
+  //   fetchData();
+  // }, [search]);
+
   useEffect(() => {
-    fetchData();
+    console.log("called here useEffect before calling fetchData")
+    const fetchData = async () => {
+      console.log("called here inside fetchData")
+      const data = await getMovieList(search)
+      console.log("Search Result: " + JSON.stringify(data.Search))
+      setMovies(data.Search);
+    };
+    fetchData()
   }, [search]);
 
   const history = useHistory();
