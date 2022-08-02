@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "./static/css/main.073c9b0a.css",
-    "main.js": "./static/js/main.a861ef98.js",
-    "index.html": "./index.html",
-    "main.073c9b0a.css.map": "./static/css/main.073c9b0a.css.map",
-    "main.a861ef98.js.map": "./static/js/main.a861ef98.js.map"
+    "main.css": "/reactjs-parallax-spring/static/css/main.073c9b0a.css",
+    "main.js": "/reactjs-parallax-spring/static/js/main.6569e212.js",
+    "index.html": "/reactjs-parallax-spring/index.html",
+    "main.073c9b0a.css.map": "/reactjs-parallax-spring/static/css/main.073c9b0a.css.map",
+    "main.6569e212.js.map": "/reactjs-parallax-spring/static/js/main.6569e212.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.a861ef98.js"
+    "static/js/main.6569e212.js"
   ]
 }
