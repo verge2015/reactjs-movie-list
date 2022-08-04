@@ -27,18 +27,9 @@ export default function MovieList(props) {
     setSearch(props.searchText)
   }, [props.searchText]);
 
-  /* A hook that is called when the component is mounted. It is used to fetch data from the OMDB API. */
-  // useEffect(() => {
-  //   console.log("called here useEffect before calling fetchData")
-  //   fetchData();
-  // }, [search]);
-
   useEffect(() => {
-    console.log("called here useEffect before calling fetchData")
     const fetchData = async () => {
-      console.log("called here inside fetchData")
       const data = await getMovieList(search)
-      console.log("Search Result: " + JSON.stringify(data.Search))
       setMovies(data.Search);
     };
     fetchData()
