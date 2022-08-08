@@ -6,15 +6,13 @@ import { motion, AnimatePresence } from "framer-motion";
 function Header(props) {
   const [isNotSmallerScreen] = useMediaQuery("(min-width:600px)");
   
-  const { 
-    changeSearch 
-  } = props;
+  const {changeSearch} = props;
 
   const [searchText, setSearchText] = useState('')
 
   const handleInput = (e) => {
-    const text = e.target.value
-    setSearchText(text)
+    const val = e.target.value
+    setSearchText(val)
   }
 
   const handleEnterKeyPressed = (e) => {
@@ -64,7 +62,6 @@ function Header(props) {
 
           <motion.div
             whileHover={{ scale: 1.1 }}
-            // whileTap={{ scale: 1.1 }}
             whileFocus={{ scale: 1.1 }}
             className="save-button"
             onClick={() => null}
@@ -83,8 +80,6 @@ function Header(props) {
                 placeholder='Search'
                 onChange={handleInput}
                 onKeyPress={handleEnterKeyPressed}
-                //value={searchText}
-                // onChange={(event) => props.changeSearch(event.target.value)}
               />
             </InputGroup>
           </motion.div>

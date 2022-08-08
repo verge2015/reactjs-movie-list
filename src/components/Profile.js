@@ -36,7 +36,7 @@ function Profile(props) {
   useEffect(() => {
     const fetchData = async () => {
       const data = await getMovieByID(selected)
-    setMovies(data);
+      setMovies(data);
     };
     fetchData()   
   }, [selected]);
