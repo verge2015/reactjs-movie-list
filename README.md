@@ -22,6 +22,8 @@ This is site for movie listing using Javascript Framework ReactJS with a two pag
  npm start
 ```
 
+## Demo
+
 This site was deployed using Netlify, please visit this [site](https://verge2015-reactjs-movie-list.netlify.app/) for actual site demo.
 
 ![main-light](https://user-images.githubusercontent.com/16742524/169526130-8b2f49a4-9960-4e0b-90f9-9ded7bd26322.png)
